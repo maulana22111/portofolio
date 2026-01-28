@@ -1,0 +1,90 @@
+.card-nav-container { 
+    width: 100%; 
+  }
+  
+  .card-nav {
+    height: 60px; /* Nilai awal, diubah oleh GSAP */
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    overflow: hidden; /* Penting untuk animasi height GSAP */
+    position: relative;
+    /* Tambahkan max-height agar tidak melebihi layar HP */
+    max-height: 90vh; 
+  }
+  
+  /* Tambahkan scroll otomatis jika menu kepanjangan di HP saat terbuka */
+  .card-nav.open {
+    overflow-y: auto;
+  }
+  
+  .card-nav-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    height: 60px;
+    /* Jaga agar header tetap di atas saat scroll menu di HP */
+    position: sticky;
+    top: 0;
+    background: inherit;
+    z-index: 10;
+  }
+  
+  .hamburger-menu { cursor: pointer; display: flex; flex-direction: column; gap: 6px; z-index: 10; }
+  .hamburger-line { width: 25px; height: 2px; background-color: currentColor; transition: 0.3s; }
+  
+  /* Animasi silang Hamburger */
+  .hamburger-menu.open .hamburger-line:nth-child(1) { transform: translateY(4px) rotate(45deg); }
+  .hamburger-menu.open .hamburger-line:nth-child(2) { transform: translateY(-4px) rotate(-45deg); }
+  
+  .logo-text { font-weight: 800; font-size: 1.3rem; letter-spacing: -1px; }
+  
+  .card-nav-content {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    padding-bottom: 20px; /* Jarak aman di bawah kartu */
+  }
+  
+  .nav-card {
+    flex: 1;
+    padding: 16px; /* Dikurangi dari 20px agar lebih slim */
+    border-radius: 0.75rem;
+    /* KUNCI: Ubah min-height menjadi lebih kecil untuk desktop */
+    min-height: 80px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ubah dari space-between agar konten rapat ke atas */
+    gap: 12px;
+  }
+  
+  .nav-card-label { font-size: 1rem; font-weight: 600; margin-bottom: 10px; }
+  .nav-card-link { 
+    text-decoration: none; 
+    color: inherit; 
+    display: flex; 
+    align-items: center; 
+    gap: 4px; 
+    font-size: 0.9rem; 
+    opacity: 0.8; 
+    margin-top: 6px;
+  }
+  .nav-card-link:hover { opacity: 1; text-decoration: underline; }
+  
+  /* --- PERBAIKAN TAMPILAN ANDROID/MOBILE --- */
+  @media (min-width: 769px) {
+    .card-nav-content {
+      max-width: 800px; /* Membatasi lebar total konten menu di desktop */
+      margin: 0 auto;   /* Menjaga konten tetap di tengah */
+      justify-content: center;
+    }
+    
+    .nav-card {
+      max-width: 250px; /* Membatasi lebar tiap kartu */
+    }
+  
+    .nav-card-label {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+  }
