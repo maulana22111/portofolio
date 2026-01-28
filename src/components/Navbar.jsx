@@ -82,7 +82,7 @@ const Navbar = ({ hidden = false }) => {
       </div>
       
       {/* Spacer: Agar konten di bawah tidak tertutup oleh navbar yang melayang */}
-      <div style={{ height: '80px' }}></div>
+      <div style={{ height: '20px' }}></div>
     </div>
   );
 };
