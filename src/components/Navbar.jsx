@@ -49,7 +49,7 @@ const Navbar = ({ hidden = false }) => {
     <div className={active ? "navbar-active" : "navbar-normal"}>
       {/* Wrapper Luar: Mengunci posisi fixed di paling atas layar */}
       <div style={{
-        position: 'absolute', 
+        position: 'sticky', 
         top: 0, 
         left: 0, 
         width: '100%', 
@@ -82,8 +82,7 @@ const Navbar = ({ hidden = false }) => {
       </div>
       
       {/* Spacer: Agar konten di bawah tidak tertutup oleh navbar yang melayang */}
-      <div style={{ height: '20px' }}></div>
-    </div>
+      
   );
 };
 
