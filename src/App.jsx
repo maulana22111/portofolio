@@ -107,6 +107,9 @@ function App() {
         </div>
       </main>
 
+
+      <div id="contact-section" >
+      </div>
       <Footer />
       <ProjectModal isOpen={!!selectedProject} onClose={handleCloseModal} project={selectedProject} />
     </>
