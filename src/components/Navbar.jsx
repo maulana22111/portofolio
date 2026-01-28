@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import CardNav from "./CardNav/CardNav";
 
+
 const Navbar = ({ hidden = false }) => {
   const [active, setActive] = useState(false);
 

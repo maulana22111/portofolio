@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { auth, loginWithGoogle, logout, db } from "../firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { collection, addDoc, onSnapshot, query, orderBy, serverTimestamp } from "firebase/firestore";
+import "./ChatRoom.css"; // Sesuaikan jalur foldernya
 
 export default function ChatRoom() {
   const [user, setUser] = useState(null);
