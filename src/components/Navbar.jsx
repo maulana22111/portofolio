@@ -40,7 +40,7 @@ const Navbar = ({ hidden = false }) => {
       links: [
         { label: "Livechat",href: "#chat-section",},
         { label: "Tiktok",href: "#contact-section",},
-        { label: "Whatsapp",href: "#contact-section",},
+        { label: "Whatsapp",href: "#footer",},
       ]
     }
   ];
