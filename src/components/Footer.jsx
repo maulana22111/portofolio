@@ -31,7 +31,7 @@ const Footer = () => {
         </h1>
 
         {/* Social Links */}
-        <div className="flex gap-10 items-center">
+        <div id="contact-section" className="flex gap-10 items-center">
           <a href="https://github.com/maulana22111" target="_blank" rel="noreferrer" className="text-zinc-500 hover:text-white transition-all hover:scale-125">
             <i className="ri-github-fill ri-2x"></i>
           </a>
