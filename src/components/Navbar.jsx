@@ -39,8 +39,8 @@ const Navbar = ({ hidden = false }) => {
       textColor: "#fff",
       links: [
         { label: "Livechat",href: "#chat-section",},
-        { label: "Tiktok",href: "#contact-section",},
-        { label: "Whatsapp",href: "#footer",},
+        { label: "Tiktok",href: "#chat-section",},
+        { label: "Whatsapp",href: "#chat-section",},
       ]
     }
   ];
